@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="Nortia">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Nortia Design</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- MATERIAL -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css"> -->
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.deep_orange-red.min.css" />
+        <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+        <!-- Fuentes -->
+        <!-- <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'> -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+
+        <!-- Boostrap -->
+        <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css"> -->
+
+        <!-- de la plantilla -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <!-- ANGULARJS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+        <!-- fancyBox -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+        <!-- NORTIA FONT -->
+        <link rel="stylesheet" href="css/nortiaFont.css" media="screen" title="no title" charset="utf-8">
+
+    </head>
+
+    <body>
+
+        <style media="screen">
+          .showroom-men{
+            height: 4em;
+            width: 100%;
+            background-color: black;
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            z-index: 100;
+
+          }
+          h2{
+            font-family: nortiaFont;
+            color: red;
+            font-size: 3em;
+            padding-top: 0.15em;
+            padding-left: 0.5em;
+            width: 10%;
+            display: inline-block;
+
+          }
+          .volver{
+            float: right;
+            margin-right: 0.5em;
+            margin-top: 0.5em;
+            text-transform: capitalize;
+          }
+
+          footer{
+            background-color:#3a3a3a;
+            height:10em;
+            padding:1em;
+          }
+
+        /**/
+        .demo-card-image.mdl-card {
+          width: 256px;
+          height: 256px;
+          /*background: url('img/foto4.jpg') center / cover;*/
+        }
+
+        mueble-image img{
+          width: 256px;
+          height: 256px;
+          object-position: center;
+          object-fit: cover;
+          /*background-size: cove*/
+        }
+        .tarjeta{
+          margin:auto;
+          margin-bottom: 2em;
+        }
+        .loguito{
+          padding-bottom:1.5em;
+          width: 50px;
+          height: 50px;
+        }
+
+        </style>
+
+        <!-- CABECERA -->
+        <section>
+          <div class="showroom-men">
+            <div style="display: inline-block;">
+              <h2>Nortia</h2>
+            </div>
+            <img class="loguito" src="img/LOGO_EJE.png" alt="Nortia"/>
+            <a href="index.html#trabajos" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent volver" type="submit" >
+                Volver
+            </a>
+          </div>
+
+        </section>
+
+        <!-- TRABAJOS -->
+        <section id="trabajos" style="padding-top: 5em;min-height:70vh;" align="center" ng-controller="MainController">
+
+          <h3><strong>{{titulo}}</strong></h3>
+
+          <!-- Image card -->
+          <div class="mdl-grid portfolio-max-width" >
+
+            <mueble-image class="tarjeta" mueble=m ng-repeat="m in muebles"></mueble-image>
+
+          </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <!-- <section class="contact-form" id="contacto" align="center">
+          <h3 style="padding-top:1em;"><strong>Escribinos</strong></h3>
+
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label contact-divs">
+            <input class="mdl-textfield__input" type="text" id="nombre">
+            <label class="mdl-textfield__label" for="nombre">Nombre...</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label contact-divs">
+              <input class="mdl-textfield__input" type="text" id="Email">
+              <label class="mdl-textfield__label" for="Email">Email...</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label contact-divs">
+              <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+              <label class="mdl-textfield__label" for="note">Contanos...</label>
+          </div>
+          <p>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" >
+                  Enviar
+              </button>
+          </p>
+
+        </section> -->
+
+        <!-- FOOTER -->
+      	<footer style="">
+      		<p style="color:white;text-align:center;">Nortia Design - 2016
+      		<br>Tel: 15-6691-7290
+          <br>Brasil 812, Loma Hermosa, Tres de Febrero.</p>
+      		<p align="center">
+      		  <a href="http://www.letme.com.ar" target="_blank" >let me</a>
+      		</p>
+      	</footer>
+
+
+        <!-- Codigo para el fancybox de la galeria. -->
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $(".imagennn").fancybox({
+              openEffect	: 'elastic',
+              closeEffect	: 'elastic',
+
+              helpers : {
+                title : {
+                  type : 'inside'
+                }
+              }
+            });
+          });
+        </script>
+        <!-- //fancybox -->
+
+
+    </body>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Directives -->
+    <script src="js/directives/muebleImage.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+
+</html>
